@@ -30,8 +30,8 @@
     --border-radius-medium: 25px;
     --border-radius-rounded: 50%
 }
-
-html, body{
+/*general stuff*/
+html, body {
     font-size: 16px;
     line-height: 1.5;
     font-family: var(--font-roboto);
@@ -39,12 +39,157 @@ html, body{
     color: var(--color-theme-dark);
 }
 
-.top-menu{
+/* Top Menu */
+.top-menu {
     background-color: var(--color-theme);
     color: var(--color-white);
 }
-    .top-menu > .container{
+    .top-menu > .container {
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+    .top-menu .site-settings {
+        display: flex;
+    }
+
+        .top-menu .site-settings .dropdown-theme {
+            background-color: var(--color-theme);
+            color: var(--color-theme-light);
+        }
+            .top-menu .site-settings .dropdown-theme button{
+                background-color: var(--color-theme);
+                color: var(--color-theme-light);
+                border: none;
+                padding-left: 0rem;
+            }
+                .top-menu .site-settings .dropdown-theme button:hover{
+                    color: var(--color-theme-dark);
+                }
+            .top-menu .site-settings .dropdown-theme .dropdown-menu{
+                background-color: var(--color-theme);
+                color: var(--color-theme-light);
+                border: none;
+            }
+                .top-menu .site-settings .dropdown-theme .dropdown-menu .dropdown-item {
+                    background-color: var(--color-theme);
+                    color: var(--color-theme-light);
+                    border: none;
+                    width: 100%;
+                    margin: 0;
+                }
+                    .top-menu .site-settings .dropdown-theme .dropdown-menu .dropdown-item:hover {
+                        background-color: var(--color-theme-dark);
+                    }
+        .top-menu .menu-links {
+            display: none;
+        }
+
+        .top-menu .menu-links .links{
+            display: none;
+        }
+        .top-menu .menu-links a {
+            color: var(--color-theme-light);
+            text-decoration: none;
+            margin: 0 0.9rem;
+        }
+            .top-menu .menu-links a:hover {
+                    color: var(--color-theme-dark);
+            }
+            .top-menu .menu-links .social-media {
+                        margin-left: 1rem;
+                        font-size: var(--font-size-14);
+            }
+                .top-menu .menu-links .social-media a {
+                            margin: 0 0.2rem;
+                }
+                    .top-menu .menu-links .social-media a:last-child {
+                                margin: 0 0 0 0.2rem;
+                    }
+
+
+
+/* Main Menu */
+.main-menu {
+    padding: 2rem 0;
+}
+
+    .main-menu .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-menu .brand {
+        flex: 1;
+    }
+    .main-menu .search {
+        flex: 3;
+    }
+    .main-menu .links {
+        flex: 2;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+        .main-menu .links .menu-link {
+            text-decoration: none;
+            color: var(--color-theme-dark);
+            margin: 0 0.5rem;
+        }
+            .main-menu .links .menu-link:last-child {
+                margin: 0 0 0 0.8rem;
+            }
+            .main-menu .links .menu-link:first-child {
+                margin: 0 1.6rem 0 0;
+            }
+            .main-menu .links .menu-link:hover {
+                color: var(--color-theme);
+            }
+            .main-menu .links .menu-link i {
+                font-size: var(--font-size-16);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media making the site responsive*/
+
+@media (min-width: 578px) {
+    .top-menu .menu-links {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .top-menu > .container {
+        justify-content: space-between;
+    }
+
+    .top-menu .menu-links .links {
+        display: inline;
+    }
+}
