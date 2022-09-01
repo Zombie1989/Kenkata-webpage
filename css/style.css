@@ -51,11 +51,13 @@ html, body {
     font-weight: var(--font-weight-medium);
     padding-left: 1.3rem;
     padding-right: 1.3rem;
+    transition: 0.4s;
 }
 
 .btn-theme:hover{
     background-color: var(--color-theme-dark);
-    color: var(--color-theme-light)
+    color: var(--color-theme-light);
+    transform: scale(1.2);
 }
 
 /* Top Menu */
@@ -194,24 +196,26 @@ html, body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 0.7rem 0.9rem;
+                transition: .4s;
+
             }
                 .main-menu nav .browse-categories button:hover {
                     background-color: var(--color-theme-dark);
                     color: var(--color-theme-light);
                 }
-                .main-menu .dropdown-theme .dropdown-menu{
+                .main-menu nav .browse-categories .dropdown .dropdown-menu{
                     background-color: var(--color-theme);
                     color: var(--color-theme-light);
                     border: none;
                 }
-                    .main-menu .dropdown-theme .dropdown-menu .dropdown-item {
+                    .main-menu nav .browse-categories .dropdown .dropdown-menu .dropdown-item {
                         background-color: var(--color-theme);
                         color: var(--color-theme-light);
                         border: none;
                         width: 100%;
                         margin: 0;
                     }
-                        .main-menu .dropdown-theme .dropdown-menu .dropdown-item:hover {
+                        .main-menu nav .browse-categories .dropdown .dropdown-menu .dropdown-item:hover {
                             background-color: var(--color-theme-dark);
                         }
 
@@ -221,7 +225,10 @@ html, body {
             justify-content: end;
             align-items: center;
         }
-    
+            .main-menu nav .special-offer:hover{
+
+                cursor: pointer;
+            }
 
 
 
@@ -264,8 +271,3 @@ html, body {
     }
 }
 
-@media (max-width: 1600px); {
-    .container {
-        width: 100%;
-    }
-}
