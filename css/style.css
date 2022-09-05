@@ -68,6 +68,25 @@ html, body {
         color: var(--color-theme-light);
     }
 
+.btn-white {
+    background-color: var(--color-white);
+    color: var(--color-theme);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    transition: 0.4s;
+}
+    .btn-white:hover {
+        background-color: var(--color-theme-dark);
+        color: var(--color-theme-light);
+        transform: scale(1.2);
+    }
+    .btn-white:focus {
+        background-color: var(--color-theme-dark);
+        color: var(--color-theme-light);
+    }
+
 /* Top Menu */
 
 .top-menu {
@@ -149,6 +168,7 @@ html, body {
     background-color: var(--color-white);
 }
     .main-menu > .container {
+        flex-direction: column;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -157,7 +177,7 @@ html, body {
     }
     .main-menu .brand {
         flex: 1;
-        display: none;
+        padding: 0 0 1rem 0;
     }
     .main-menu .search {
         flex: 3;
@@ -247,6 +267,38 @@ html, body {
         }
 
 
+/* showcase */
+
+.showcase {
+    background-color: var(--color-grey-3);
+}
+
+    .showcase .container {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+        .showcase .showcase-body h1 {
+            font-size: 4rem;
+            font-family: var(--font-play);
+        }
+            .showcase .showcase-body h1 span {
+                font-weight: var(--font-weight-bold);
+                color: var(--color-theme);
+            }
+
+            .showcase .showcase-body a {
+                display: inline-block;
+            }
+
+
+    .showcase img {
+        display: none;
+    }
+
+/* shop info */
+
+
 
 
 
@@ -279,16 +331,52 @@ html, body {
     .top-menu .menu-links {
         display: block;
     }
+    .main-menu > .container {
+        flex-direction: unset;
+}
 
-    .main-menu .brand {
-        display: inline;
+@media (min-width: 768px) {
+    .showcase .showcase-body h1 span {
+        display: block;
+    }
+    .showcase .showcase-body h1 {
+        font-size: 5rem;
     }
 }
 
 @media (min-width: 992px) {
-
-        .top-menu .menu-links .links {
-            display: inline;
+    .top-menu .menu-links .links {
+        display: inline;
+    }
+    .showcase .container {
+        text-align: left;
+        justify-content: space-between;
+        display: flex;
+        padding-top: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+        .showcase .showcase-body h1 {
+            font-size: 3rem;
+        }
+        .showcase img {
+            display: block;
+            width: 40%
+        }
+        .showcase .showcase-body p {
+            width: 65%
         }
 }
 
+@media (min-width: 1200px) {
+    .showcase .showcase-body h1 {
+        font-size: 4rem;
+    }
+    .showcase img {
+        width: 60%
+    }
+    .showcase .showcase-body p {
+        width: 80%
+    }
+
+}
