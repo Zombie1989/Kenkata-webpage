@@ -298,8 +298,35 @@ html, body {
 
 /* shop info */
 
-
-
+.shop-info {
+    padding: 1rem;
+}
+    .shop-info .info-box {
+        background-color: var(--color-theme-light);
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        border-radius: var(--border-radius-small);
+        padding: 0.2rem;
+    }
+        .shop-info .info-box:hover{
+            background-color: var(--color-theme);
+            color: var(--color-white)
+        }
+        .shop-info .info-box img {
+            margin: 1rem;
+        }
+            .shop-info .info-box:hover img{
+                filter: brightness(1000%)
+            }
+        .shop-info .info-box h2 {
+            color: var(--color-theme);
+            font-size: var(--font-size-16);
+            font-weight: medium;
+        }
+            .shop-info .info-box:hover h2 {
+                color: var(--color-white);
+            }
 
 
 
@@ -325,29 +352,37 @@ html, body {
 /*media queries making the site responsive*/
 
 @media (min-width: 578px) {
+
     .top-menu > .container {
         justify-content: space-between;
     }
     .top-menu .menu-links {
         display: block;
     }
+
+
     .main-menu > .container {
         flex-direction: unset;
 }
 
 @media (min-width: 768px) {
+
     .showcase .showcase-body h1 span {
         display: block;
     }
     .showcase .showcase-body h1 {
         font-size: 5rem;
     }
-}
 
+
+}
 @media (min-width: 992px) {
+
     .top-menu .menu-links .links {
         display: inline;
     }
+
+
     .showcase .container {
         text-align: left;
         justify-content: space-between;
@@ -361,22 +396,45 @@ html, body {
         }
         .showcase img {
             display: block;
-            width: 40%
+            width: 40%;
         }
-        .showcase .showcase-body p {
-            width: 65%
-        }
+    .showcase .showcase-body p {
+        width: 65%;
+    }
+
+
+    .shop-info .container-fluid {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .shop-info .info-box {
+        margin: 0 0.8rem;
+        flex: 1;
+        align-items: center;
+    }
 }
 
 @media (min-width: 1200px) {
+
     .showcase .showcase-body h1 {
         font-size: 4rem;
     }
     .showcase img {
-        width: 60%
+        width: 60%;
     }
     .showcase .showcase-body p {
-        width: 80%
+        width: 80%;
     }
+
+    .shop-info {
+        padding: 7rem;
+    }
+        .shop-info .container-fluid {
+            max-width: 1600px;
+        }
+        .shop-info .info-box {
+            padding: 1rem;  
+        }
+        
 
 }
