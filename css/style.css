@@ -88,6 +88,7 @@ html, body {
     }
 
 .section-title {
+    padding-top: 7rem;
     color: var(--color-theme-dark);
     text-align: center;
     font-weight: var(--font-weight-bold);
@@ -226,6 +227,18 @@ html, body {
             .main-menu .links .menu-link i {
                 font-size: var(--font-size-16);
             }
+            .main-menu .links #cart {
+                position: relative;
+            }
+                .main-menu .links #cart .badge {
+                    position: absolute;
+                    top: -1.1rem;
+                    left: 0.9rem;
+                    background-color: var(--color-theme);
+                }
+                    .main-menu .links #cart:hover .badge {
+                        background-color: var(--color-theme-dark)
+                    }
 
     /*Main menu navigation bar*/
 
@@ -290,7 +303,6 @@ html, body {
 .showcase {
     background-color: var(--color-grey-3);
 }
-
     .showcase .container {
         text-align: center;
         padding-top: 1rem;
@@ -351,10 +363,12 @@ html, body {
     .shop-by-category .grid {
         display: grid;
         gap: 0.8rem;
-        grid-template-columns: repeat(5, 249px);
+        grid-template-columns: repeat(5, minmax(150px, 249px));
         grid-template-rows: repeat(3, 249px);
+
     }
     .shop-by-category .category-box {
+        position: relative;
         background-color: var(--color-grey-1);
         border-radius: var(--border-radius-small);
         overflow: hidden;
@@ -363,14 +377,25 @@ html, body {
         width: 100%;
     }
         .shop-by-category .category-box .category-box-title {
-            width: 80%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            border-radius: 0 var(--border-radius-small) 0 0;
             background-color: var(--color-theme-dark);
             color: var(--color-theme);
             padding: 0.5rem 1rem;
             font-weight: var(--font-weight-medium);
+            height: 40px;
         }
+            .shop-by-category .category-box:hover .category-box-title {
+                height: 70px;
+            }
             .shop-by-category .category-box .category-box-title span {
                 color: var(--color-white);
+                display: block;
+                font-size: 0.8rem;
+                margin-top: 0.6rem;
             }
 
             
@@ -488,7 +513,7 @@ html, body {
     }
 
     .shop-info {
-        padding: 7rem;
+        padding: 7rem 0 0 0;
     }
         .shop-info .container-fluid {
             max-width: 1600px;
