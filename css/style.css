@@ -56,7 +56,7 @@ html, body {
     font-weight: var(--font-weight-medium);
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-    transition: 0.4s;
+    transition: 300ms ease-in;
 }
     .btn-theme:hover {
         background-color: var(--color-theme-dark);
@@ -75,7 +75,7 @@ html, body {
     font-weight: var(--font-weight-medium);
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-    transition: 0.4s;
+    transition: 300ms ease-in;
 }
     .btn-white:hover {
         background-color: var(--color-theme-dark);
@@ -137,6 +137,7 @@ html, body {
             }
                 .top-menu .site-settings .dropdown-theme button:hover {
                     color: var(--color-theme-dark);
+                    transition: 300ms;
                 }
                 .top-menu .site-settings .dropdown-theme .dropdown-menu {
                     background-color: var(--color-theme);
@@ -169,6 +170,7 @@ html, body {
         }
             .top-menu .menu-links a:hover {
                 color: var(--color-theme-dark);
+                transition: 300ms ease-in;
             }
             .top-menu .menu-links .social-media {
                 margin-left: 1rem;
@@ -223,6 +225,7 @@ html, body {
             }
             .main-menu .links .menu-link:hover {
                 color: var(--color-theme);
+                transition: 300ms;
             }
             .main-menu .links .menu-link i {
                 font-size: var(--font-size-16);
@@ -235,6 +238,7 @@ html, body {
                     top: -1.1rem;
                     left: 0.9rem;
                     background-color: var(--color-theme);
+                    transition: 300ms ease-in;
                 }
                     .main-menu .links #cart:hover .badge {
                         background-color: var(--color-theme-dark)
@@ -266,7 +270,7 @@ html, body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 0.7rem 0.9rem;
-                transition: .4s;
+                transition: 300ms ease-in;
             }
                 .main-menu nav .browse-categories button:hover {
                     background-color: var(--color-theme-dark);
@@ -341,7 +345,8 @@ html, body {
     }
         .shop-info .info-box:hover{
             background-color: var(--color-theme);
-            color: var(--color-white)
+            color: var(--color-white);
+            transition: 300ms ease-in;
         }
         .shop-info .info-box img {
             margin: 1rem;
@@ -387,6 +392,7 @@ html, body {
             padding: 0.5rem 1rem;
             font-weight: var(--font-weight-medium);
             height: 40px;
+            transition: 300ms ease-in;
         }
             .shop-by-category .category-box:hover .category-box-title {
                 height: 70px;
