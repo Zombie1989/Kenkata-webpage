@@ -105,6 +105,12 @@ html, body {
         padding: 1.2rem;
     }
 
+.instock {
+    color: var(--color-product-instock);
+}
+.outofstock {
+    color: var(--color-product-outofstock);
+}
 
 /* Top Menu */
 
@@ -434,11 +440,101 @@ html, body {
         grid-row: 3 / -1 ;
     }
 
+/*New Arrivals*/
 
-
-
-
-
+.new-arrivals {
+    padding: 2rem;
+}
+    .new-arrivals .card {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        overflow: hidden;
+    }
+        .new-arrivals .card .card-body {
+            position: absolute;
+            bottom: 0;
+            height: 13%;
+            color: var(--color-white);
+            z-index: 1;
+            transition: 200ms ease-in;
+            font-size: 1rem;
+            width: 100%;
+        }
+            .new-arrivals .card:hover .card-body {
+                height: 40%;
+            }
+            .new-arrivals .card .card-body h2 {
+                font-size: 1.12rem;
+                margin-bottom: 2rem;
+                transition: 300ms ease-in;
+                font-weight: var(--font-weight-regular);
+            }
+                .new-arrivals .card:hover .card-body h2 {
+                    margin-bottom: 0;
+                }
+            .new-arrivals .card .card-body button {
+                background-color: transparent;
+                color: var(--color-white);
+                border: 1px solid var(--color-white);
+                padding-left: 0.7rem;
+                padding-right: 0.7rem;
+                margin: 0.5rem 0;                
+            }
+            .new-arrivals .card .card-body .card-price {
+                text-decoration: line-through;
+            }
+            .new-arrivals .card .card-body .card-discount-star {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                color: var(--color-theme);
+            }
+                .new-arrivals .card .card-body .card-discount-star .card-discount-price {
+                    font-weight: var(--font-weight-medium);
+                    font-size: 1.25rem;
+                    margin: 0;
+                }
+        .new-arrivals .card .card-menu {
+            position: absolute;
+            right: 1.25rem;
+            top: 101%;
+            z-index: 1;
+            list-style: none;
+            margin: auto;
+            padding: 0.7rem;
+            font-size: 1.25rem;
+            border-radius: var(--border-radius-medium);
+            background-color: var(--color-white);
+            transition: 300ms ease-in;
+            
+        }
+            .new-arrivals .card:hover .card-menu {
+                top: 20px;
+            }
+            .new-arrivals .card .card-menu li{
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+            }
+            .new-arrivals .card .card-menu li a {
+                color: var(--color-grey-0);
+            }
+                .new-arrivals .card .card-menu li a:hover {
+                    color: var(--color-theme);
+                }
+        .new-arrivals .card .card-background {
+            position: absolute;
+            bottom: 0;
+            height: 13%;
+            width: 100%;
+            background-color: var(--color-theme-dark);
+            opacity: 0.90;
+            transition: 300ms ease-in;
+        }
+            .new-arrivals .card:hover .card-background {
+                height: 100%;
+            }
 
 
 
