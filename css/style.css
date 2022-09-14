@@ -57,6 +57,7 @@ html, body {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
     transition: 300ms ease-in;
+    border: none;
 }
     .btn-theme:hover {
         background-color: var(--color-theme-dark);
@@ -76,6 +77,7 @@ html, body {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
     transition: 300ms ease-in;
+    border: none;
 }
     .btn-white:hover {
         background-color: var(--color-theme-dark);
@@ -83,6 +85,26 @@ html, body {
         transform: scale(1.2);
     }
     .btn-white:focus {
+        background-color: var(--color-theme-dark);
+        color: var(--color-theme-light);
+    }
+
+.btn-dark {
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    transition: 300ms ease-in;
+    border: none;
+}
+    .btn-dark:hover {
+        background-color: var(--color-white);
+        color: var(--color-theme-dark);
+        transform: scale(1.2);
+    }
+    .btn-dark:focus {
         background-color: var(--color-theme-dark);
         color: var(--color-theme-light);
     }
@@ -443,7 +465,7 @@ html, body {
 /*New Arrivals*/
 
 .new-arrivals {
-    padding: 2rem;
+    padding: 0rem;
 }
     .new-arrivals .card {
         position: relative;
@@ -536,6 +558,26 @@ html, body {
                 height: 100%;
             }
 
+/* 30% off banner */
+
+.border-30 {
+    background-color: var(--color-grey-3);
+    margin-top: 6rem;
+}
+    .border-30 > .container {
+        height: 418px;
+    }
+
+    .border-30 .border-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .border-30 .border-body .border-body-theme {
+        background-color: var(--color-theme);
+        height: 418px;
+        width: 255px;
+    }
 
 
 
