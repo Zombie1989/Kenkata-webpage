@@ -624,6 +624,27 @@ html, body {
             font-size: 1.5rem;
             font-weight: var(--font-weight-medium);
         }
+    .flash-sale .flash-sale-grid {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+
+    }
+
+        .flash-sale .flash-sale-grid .flash-time {
+            background-color: var(--color-white);
+            width: 109px;
+            height: 109px;
+            border-radius: var(--border-radius-rounded);
+            border: 3px dashed var(--color-theme);
+
+        }
+        .flash-sale .flash-sale-grid .btn-flash {
+            grid-column-end: 4;
+            
+
+        }
+
 
 
 
