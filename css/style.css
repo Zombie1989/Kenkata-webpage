@@ -37,6 +37,7 @@
 
     --border-radius-small: 8px;
     --border-radius-medium: 25px;
+    --border-radius-large: 40px;
     --border-radius-rounded: 50%;
 }
 
@@ -72,10 +73,9 @@ html, body {
 .btn-white {
     background-color: var(--color-white);
     color: var(--color-theme);
-    border-radius: var(--border-radius-medium);
+    border-radius: var(--border-radius-large);
     font-weight: var(--font-weight-medium);
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
+    padding: 1rem 2rem;
     transition: 300ms ease-in;
     border: none;
 }
@@ -92,10 +92,9 @@ html, body {
 .btn-dark {
     background-color: var(--color-theme-dark);
     color: var(--color-white);
-    border-radius: var(--border-radius-medium);
+    border-radius: var(--border-radius-large);
     font-weight: var(--font-weight-medium);
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
+    padding: 1rem 2rem;
     transition: 300ms ease-in;
     border: none;
 }
@@ -561,25 +560,35 @@ html, body {
 
 /* 30% off banner */
 
-.discount-new {
+.banner-30 {
     background-color: var(--color-grey-1);
     margin-top: 10rem;
 }
-    .discount-new .container {
+    .banner-30 .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 418px;
     }
     
-    .discount-new .border-body-left {
+    .banner-30 .banner-body-left {
         background-color: var(--color-theme);
         height: 100%;
-        width: 250px;
-
+        min-width: 250px;
+        color: var(--color-white);
+        padding-top: 7rem;
+        text-align: center;
     }
+        .banner-30 .banner-body-left h3 {
+            font-size: 3.75rem;
+            font-weight: var(--font-weight-bold);
+            font-family: var(--font-play);
+        }
+            .banner-30 .banner-body-left h3 span {
+                font-size: 2.25rem;
+            }
     
-    .discount-new .border-body-right {
+    .banner-30 .banner-body-right {
         width: 450px;
         color: var(--color-white);
         font-size: 0.875rem;
