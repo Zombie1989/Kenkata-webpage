@@ -125,13 +125,110 @@ html, body {
         font-weight: var(--font-weight-regular);
         padding: 1.2rem;
     }
-
+  
 .instock {
     color: var(--color-product-instock);
 }
 .outofstock {
     color: var(--color-product-outofstock);
 }
+
+/* General cards */
+
+.cloth-cards {
+    padding: 0rem;
+}
+    .cloth-cards .card {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        overflow: hidden;
+        background-color: var(--color-grey-3);
+    }
+        .cloth-cards .card .card-body {
+            position: absolute;
+            bottom: 0;
+            height: 13%;
+            color: var(--color-white);
+            z-index: 1;
+            transition: 200ms ease-in;
+            font-size: 1rem;
+            width: 100%;
+        }
+            .cloth-cards .card:hover .card-body {
+                height: 40%;
+            }
+            .cloth-cards .card .card-body h2 {
+                font-size: 1.12rem;
+                margin-bottom: 2rem;
+                transition: 300ms ease-in;
+                font-weight: var(--font-weight-regular);
+            }
+                .cloth-cards .card:hover .card-body h2 {
+                    margin-bottom: 0;
+                }
+            .cloth-cards .card .card-body button {
+                background-color: transparent;
+                color: var(--color-white);
+                border: 1px solid var(--color-white);
+                padding-left: 0.7rem;
+                padding-right: 0.7rem;
+                margin: 0.5rem 0;                
+            }
+            .cloth-cards .card .card-body .card-price {
+                text-decoration: line-through;
+            }
+            .cloth-cards .card .card-body .card-discount-star {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                color: var(--color-theme);
+            }
+                .cloth-cards .card .card-body .card-discount-star .card-discount-price {
+                    font-weight: var(--font-weight-medium);
+                    font-size: 1.25rem;
+                    margin: 0;
+                }
+        .cloth-cards .card .card-menu {
+            position: absolute;
+            right: 1.25rem;
+            top: 101%;
+            z-index: 1;
+            list-style: none;
+            margin: auto;
+            padding: 0.7rem;
+            font-size: 1.25rem;
+            border-radius: var(--border-radius-medium);
+            background-color: var(--color-white);
+            transition: 300ms ease-in;
+            
+        }
+            .cloth-cards .card:hover .card-menu {
+                top: 20px;
+            }
+            .cloth-cards .card .card-menu li{
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+            }
+            .cloth-cards .card .card-menu li a {
+                color: var(--color-grey-0);
+            }
+                .cloth-cards .card .card-menu li a:hover {
+                    color: var(--color-theme);
+                }
+        .cloth-cards .card .card-background {
+            position: absolute;
+            bottom: 0;
+            height: 13%;
+            width: 100%;
+            background-color: var(--color-theme-dark);
+            opacity: 0.90;
+            transition: 300ms ease-in;
+        }
+            .cloth-cards .card:hover .card-background {
+                height: 100%;
+            }
 
 /* Top Menu */
 
@@ -461,103 +558,6 @@ html, body {
         grid-row: 3 / -1 ;
     }
 
-/*New Arrivals*/
-
-.new-arrivals {
-    padding: 0rem;
-}
-    .new-arrivals .card {
-        position: relative;
-        height: 400px;
-        width: 400px;
-        overflow: hidden;
-        background-color: var(--color-grey-3);
-    }
-        .new-arrivals .card .card-body {
-            position: absolute;
-            bottom: 0;
-            height: 13%;
-            color: var(--color-white);
-            z-index: 1;
-            transition: 200ms ease-in;
-            font-size: 1rem;
-            width: 100%;
-        }
-            .new-arrivals .card:hover .card-body {
-                height: 40%;
-            }
-            .new-arrivals .card .card-body h2 {
-                font-size: 1.12rem;
-                margin-bottom: 2rem;
-                transition: 300ms ease-in;
-                font-weight: var(--font-weight-regular);
-            }
-                .new-arrivals .card:hover .card-body h2 {
-                    margin-bottom: 0;
-                }
-            .new-arrivals .card .card-body button {
-                background-color: transparent;
-                color: var(--color-white);
-                border: 1px solid var(--color-white);
-                padding-left: 0.7rem;
-                padding-right: 0.7rem;
-                margin: 0.5rem 0;                
-            }
-            .new-arrivals .card .card-body .card-price {
-                text-decoration: line-through;
-            }
-            .new-arrivals .card .card-body .card-discount-star {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                color: var(--color-theme);
-            }
-                .new-arrivals .card .card-body .card-discount-star .card-discount-price {
-                    font-weight: var(--font-weight-medium);
-                    font-size: 1.25rem;
-                    margin: 0;
-                }
-        .new-arrivals .card .card-menu {
-            position: absolute;
-            right: 1.25rem;
-            top: 101%;
-            z-index: 1;
-            list-style: none;
-            margin: auto;
-            padding: 0.7rem;
-            font-size: 1.25rem;
-            border-radius: var(--border-radius-medium);
-            background-color: var(--color-white);
-            transition: 300ms ease-in;
-            
-        }
-            .new-arrivals .card:hover .card-menu {
-                top: 20px;
-            }
-            .new-arrivals .card .card-menu li{
-                margin-top: 0.2rem;
-                margin-bottom: 0.2rem;
-            }
-            .new-arrivals .card .card-menu li a {
-                color: var(--color-grey-0);
-            }
-                .new-arrivals .card .card-menu li a:hover {
-                    color: var(--color-theme);
-                }
-        .new-arrivals .card .card-background {
-            position: absolute;
-            bottom: 0;
-            height: 13%;
-            width: 100%;
-            background-color: var(--color-theme-dark);
-            opacity: 0.90;
-            transition: 300ms ease-in;
-        }
-            .new-arrivals .card:hover .card-background {
-                height: 100%;
-            }
-
 /* 30% off banner */
 
 .banner-30 {
@@ -593,6 +593,37 @@ html, body {
         color: var(--color-white);
         font-size: 0.875rem;
     }
+
+/* Flash Sale */
+
+.flash-sale {
+    background-color: var(--color-theme-dark);
+    height: 435px;
+
+}
+    .flash-sale .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10rem;
+    }
+    .flash-sale .flash-sale-left {
+        background-color: var(--color-theme);
+        height: 265px;
+        width: 255px;
+        text-align: center;
+        padding-top: 1.5rem;
+        color: var(--color-white); 
+    }
+        .flash-sale .flash-sale-left h3 {
+            font-family: var(--font-play);
+            font-size: 3.75rem;
+            font-weight: var(--font-weight-bold);
+        }
+        .flash-sale .flash-sale-left p {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-medium);
+        }
 
 
 
