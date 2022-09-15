@@ -80,7 +80,7 @@ html, body {
     border: none;
 }
     .btn-white:hover {
-        background-color: var(--color-theme-dark);
+        background-color: var(--color-theme);
         color: var(--color-theme-light);
         transform: scale(1.2);
     }
