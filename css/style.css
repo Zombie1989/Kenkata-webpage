@@ -472,6 +472,7 @@ html, body {
         height: 400px;
         width: 400px;
         overflow: hidden;
+        background-color: var(--color-grey-3);
     }
         .new-arrivals .card .card-body {
             position: absolute;
@@ -560,25 +561,29 @@ html, body {
 
 /* 30% off banner */
 
-.border-30 {
-    background-color: var(--color-grey-3);
-    margin-top: 6rem;
+.discount-new {
+    background-color: var(--color-grey-1);
+    margin-top: 10rem;
 }
-    .border-30 > .container {
-        height: 418px;
-    }
-
-    .border-30 .border-body {
+    .discount-new .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    .border-30 .border-body .border-body-theme {
-        background-color: var(--color-theme);
         height: 418px;
-        width: 255px;
     }
+    
+    .discount-new .border-body-left {
+        background-color: var(--color-theme);
+        height: 100%;
+        width: 250px;
 
+    }
+    
+    .discount-new .border-body-right {
+        width: 450px;
+        color: var(--color-white);
+        font-size: 0.875rem;
+    }
 
 
 
