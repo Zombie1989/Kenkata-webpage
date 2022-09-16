@@ -13,6 +13,7 @@
     --color-theme: #20D3C2;
     --color-theme-light: #EDFCFA;
     --color-theme-dark: #0E153D;
+    --color-theme-lightdark: #404662;
     --color-dark: #080C24;
     --color-white: #ffffff;
     --color-grey-0: #AAAAAA;
@@ -597,12 +598,13 @@ html, body {
 /* Flash Sale */
 
 .flash-sale {
-    background-color: var(--color-theme-dark);
+    background-color: var(--color-theme-lightdark);
     height: 435px;
 
 }
     .flash-sale .container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin-top: 10rem;
@@ -612,7 +614,7 @@ html, body {
         height: 265px;
         width: 255px;
         text-align: center;
-        padding-top: 1.5rem;
+        padding-top: 2rem;
         color: var(--color-white); 
     }
         .flash-sale .flash-sale-left h3 {
@@ -625,27 +627,60 @@ html, body {
             font-weight: var(--font-weight-medium);
         }
     .flash-sale .flash-sale-grid {
-        display:grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-
+        display:flex;
+        position:relative;
+        margin-top: 5rem;
     }
 
         .flash-sale .flash-sale-grid .flash-time {
             background-color: var(--color-white);
+            color: var(--color-theme);
+            font-family: var(--font-play);
+            font-weight: var(--font-weight-bold);
+            font-size: 2.25rem;
             width: 109px;
             height: 109px;
             border-radius: var(--border-radius-rounded);
             border: 3px dashed var(--color-theme);
-
+            margin-left: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            line-height: 0.8;
         }
+            .flash-sale .flash-sale-grid .flash-time span{
+                color: black;
+                font-family: var(--font-roboto);
+                font-weight: var(--font-weight-regular);
+                font-size: 1rem;
+                padding-top: 0;
+            }
         .flash-sale .flash-sale-grid .btn-flash {
-            grid-column-end: 4;
-            
-
+            position: absolute;
+            margin-top: 8rem;
+            margin-left: 14rem; 
         }
 
+/* Top Sellers */
 
+.grid-tops-container {
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    grid-template-rows: 345px;
+    grid-template-areas: 
+        "left upper-right"
+        "left lower-right"
+    ;
+}
+
+.grid-tops-1 {
+    grid-area: left;
+}
+.grid-tops-2 {
+    grid-area: upper-right;
+}
+.grid-tops-3 {
+    grid-area: lower-right;
+}
 
 
 /*media queries making the site responsive*/
