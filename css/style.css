@@ -134,7 +134,19 @@ html, body {
     color: var(--color-product-outofstock);
 }
 
-/* General cards */
+/* forms */
+
+.form-theme input {
+    width: 100%;
+    border: none;
+    height: 2.625rem;
+}
+
+.form-theme span {
+    color: var(--color-theme);
+}
+
+/* General card settings */
 
 .cloth-cards {
     padding: 0rem;
@@ -149,7 +161,7 @@ html, body {
         .cloth-cards .card .card-body {
             position: absolute;
             bottom: 0;
-            height: 13%;
+            height: 3.4rem;
             color: var(--color-white);
             z-index: 1;
             transition: 200ms ease-in;
@@ -221,7 +233,7 @@ html, body {
         .cloth-cards .card .card-background {
             position: absolute;
             bottom: 0;
-            height: 13%;
+            height: 3.4rem;
             width: 100%;
             background-color: var(--color-theme-dark);
             opacity: 0.90;
@@ -630,6 +642,7 @@ html, body {
         display:flex;
         position:relative;
         margin-top: 5rem;
+        margin-right: 2rem;
     }
 
         .flash-sale .flash-sale-grid .flash-time {
@@ -664,23 +677,310 @@ html, body {
 
 .grid-tops-container {
     display: grid;
-    grid-template-columns: repeat(2, 550px);
-    grid-template-rows: 345px;
-    grid-template-areas: 
-        "left upper-right"
-        "left lower-right"
-    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 340px 340px;
+    gap: 0.8rem;
+}
+    .grid-tops-container .grid-tops {
+        position: relative;
+        background-color: var(--color-grey-3);
+        overflow: hidden;
+        border-radius: var(--border-radius-small);
+    }
+        .grid-tops-container .grid-tops .card-body {
+            position: absolute;
+            bottom: 0;
+            height: 40px;
+            color: var(--color-white);
+            z-index: 1;
+            transition: 200ms ease-in;
+            font-size: 1rem;
+            width: 100%;
+            margin-left: 1rem;
+        }
+            .grid-tops-container .grid-tops:hover .card-body {
+                height: 9rem;
+            }
+            .grid-tops-container .grid-tops .card-body h2 {
+                font-size: 1.12rem;
+                margin-bottom: 5rem;
+                transition: 300ms ease-in;
+                font-weight: var(--font-weight-regular);
+            }
+                .grid-tops-container .grid-tops:hover .card-body h2 {
+                    margin-bottom: 0;
+                }
+            .grid-tops-container .grid-tops .card-body button {
+                background-color: transparent;
+                color: var(--color-white);
+                border: 1px solid var(--color-white);
+                padding-left: 0.7rem;
+                padding-right: 0.7rem;
+                margin: 0.5rem 0;                
+            }
+                .grid-tops-container .grid-tops .card-body .card-price {
+                    text-decoration: line-through;
+                }
+                .grid-tops-container .grid-tops .card-body .card-discount-star {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    color: var(--color-theme);
+                    padding-right: 2rem;
+                }
+                    .grid-tops-container .grid-tops .card-body .card-discount-star .card-discount-price {
+                        font-weight: var(--font-weight-medium);
+                        font-size: 1.25rem;
+                        margin: 0;
+                    }
+            .grid-tops-container .grid-tops .card-menu {
+                position: absolute;
+                right: 1rem;
+                top: 101%;
+                z-index: 1;
+                list-style: none;
+                margin: auto;
+                padding: 0.7rem;
+                font-size: 1.25rem;
+                border-radius: var(--border-radius-medium);
+                background-color: var(--color-white);
+                transition: 300ms ease-in;
+            }
+
+            .grid-tops-container .grid-tops:hover .card-menu {
+                top: 20px;
+            }
+            .grid-tops-container .grid-tops .card-menu li{
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+            }
+                .grid-tops-container .grid-tops .card-menu li a{
+                    color: var(--color-grey-0);
+                }
+                    .grid-tops-container .grid-tops .card-menu li a:hover {
+                        color: var(--color-theme);
+                    }
+    .grid-tops-container .grid-tops .card-background {
+        position: absolute;
+        bottom: 0;
+        height: 3.4rem;
+        width: 100%;
+        background-color: var(--color-theme-dark);
+        opacity: 0.90;
+        transition: 300ms ease-in;
+    }
+        .grid-tops-container .grid-tops:hover .card-background {
+            height: 100%;
+        }
+
+#grid-tops-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+#grid-tops-2 {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+#grid-tops-3 {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
 }
 
-.grid-tops-1 {
-    grid-area: left;
+/* Subscribe Now */
+
+.subscribe-now {
+    height: 315px;
+    margin-top: 6rem;
+    background-color: var(--color-grey-4);
 }
-.grid-tops-2 {
-    grid-area: upper-right;
+    .subscribe-now .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .subscribe-now .sub-now {
+        text-align: start;
+        flex: 1;
+    }
+        .subscribe-now .sub-now p {
+            padding: 0;
+            max-width: 400px;
+        }
+    .subscribe-now .sub-now-grey {
+        flex: 1;
+        background-color: var(--color-grey-1);
+        height: 315px;
+    }
+
+/* Login-registration page */
+
+.home-account {
+    background-color: var(--color-theme-lightdark);
+    height: 140px;
+    padding-top: 2.75rem;
 }
-.grid-tops-3 {
-    grid-area: lower-right;
+    .home-account .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .home-account .container h1 {
+            color: var(--color-theme);
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-medium);
+        }
+            .home-account .container .breadcrumb {
+                margin: 0;
+            }
+            .home-account .container .breadcrumb a {
+                color: var(--color-theme);
+                text-decoration: none;
+            }
+            .home-account .container .breadcrumb a:hover {
+                color: var(--color-white);
+            }
+            .home-account .container .breadcrumb .active {
+                color: var(--color-white);
+            }
+
+
+.login-page .container {
+    display: flex;
+    justify-content: space-between;
 }
+    .login-page .card {
+        padding: 1rem;
+        flex: 1;
+        background-color: var(--color-grey-4);
+        border: none;
+        margin: 1rem;
+        margin-top: 6rem;
+        height: 100%;
+        border-radius: var(--border-radius-small)
+    }
+        .login-page .card .card-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-medium);
+        }
+        .login-page .card .small-cardtext {
+            font-size: 0.875rem;
+            color: var(--color-grey-0)
+        }
+        .login-page .card .cardtext {
+            font-size: 1rem;
+        }
+            .login-page .card .cardtext a {
+                color: var(--color-theme);
+                font-weight: bold;
+                text-decoration: none;
+                transition: 200ms ease-in;
+            }
+                .login-page .card .cardtext a:hover {
+                    color: var(--color-theme-dark);
+                }
+                
+    .login-page button {
+        width: 100%;
+        height: 3.25rem;
+    }
+        .login-page button:hover {
+            transform: scale(1);
+        }
+    .login-page .remember-me {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .login-page .remember-me a {
+            color: var(--color-theme);
+            text-decoration: none;
+        }
+            .login-page .remember-me a:hover {
+                color: var(--color-theme-dark);
+            }
+
+.external-login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+    .external-login .login-with {
+        position: absolute;
+        background-color: var(--color-grey-4);
+        padding: 0 1.25rem;
+        top: 5px;
+        z-index: 1;
+        font-weight: var(--font-weight-medium);
+    }
+    .external-login hr {
+        position: absolute;
+        width: 100%;
+
+    }
+.social-media-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* social-media buttons */
+
+.loginBtn {
+    margin: 0.6rem;
+    border-radius: var(--border-radius-small);
+    position: relative;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-white);
+  }
+    .loginBtn:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 0.5em;
+        left: 0.1em;
+        width: 34px;
+        height: 100%;
+    }
+    .loginBtn:focus {
+        outline: none;
+    }
+    .loginBtn:active {
+        box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+    }
+  
+  
+  /* Facebook */
+  .loginBtn--facebook {
+    background-color: #3B5998;
+    background-image: linear-gradient(#4C69BA, #3B55A0);
+    text-shadow: 0 -1px 0 #354C8C;
+  }
+    .loginBtn--facebook:before {
+        background: url(../images/social-media/Facebook.svg) 6px 6px no-repeat;
+    }
+    .loginBtn--facebook:hover,
+    .loginBtn--facebook:focus {
+        background-color: #5B7BD5;
+        background-image: linear-gradient(#5B7BD5, #4864B1);
+    }
+    
+  
+  /* Google */
+  .loginBtn--google {
+    background: #4285F4;
+  }
+    .loginBtn--google:before {
+        background: url(../images/social-media/Google\ icon.svg) 6px 6px no-repeat;
+    }
+    .loginBtn--google:hover,
+    .loginBtn--google:focus {
+        background: #528FF5;
+    }
+
+
 
 
 /*media queries making the site responsive*/
